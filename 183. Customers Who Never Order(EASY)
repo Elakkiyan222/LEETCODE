@@ -1,0 +1,2 @@
+SELECT NAME as customers FROM customers 
+WHERE ID NOT in (SELECT CUSTOMERID FROM ORDERS);
