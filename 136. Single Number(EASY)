@@ -1,0 +1,22 @@
+class Solution {
+    public int singleNumber(int[] nums) {
+        int l=nums.length;
+        for(int i=0;i<l;i++)
+        {
+            int count=0;
+            int first=nums[i];
+            for(int j=0;j<l;j++)
+            {
+                if(first==nums[j] && i!=j)
+                {
+                    count+=1;
+                }
+            }
+            if(count==0)
+            {
+                return nums[i];
+            }
+        }
+        return 0;
+    }
+}
