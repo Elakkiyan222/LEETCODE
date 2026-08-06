@@ -1,0 +1,16 @@
+class Solution {
+public:
+    int subtractProductAndSum(int n) {
+        int prod=1;
+        int sum=0;
+        while(n>0)
+        {
+            int digi=n%10;
+            prod*=digi;
+            sum+=digi;
+            n=n/10;
+        }
+        int fin=prod-sum;
+        return fin;
+    }
+};
