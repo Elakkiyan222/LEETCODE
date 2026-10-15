@@ -1,0 +1,38 @@
+class Solution {
+    public boolean isPalindrome(String s) {
+        int n=s.length();
+        char[] arr=new char[n];
+        int j=0;
+        for(int i=0;i<n;i++)
+        {
+            if(Character.isLetterOrDigit(s.charAt(i)))
+            {
+                arr[j]=Character.toLowerCase(s.charAt(i));
+                j++;
+            }
+        }
+        char[] arr1=new char[j];
+        int k=0;
+        for(int i=j-1;i>=0;i--)
+        {
+            arr1[k]=arr[i];
+            k++;
+        }
+        int count=0;
+        for(int i=0;i<j;i++)
+        {
+            if(arr[i]==arr1[i])
+            {
+                count++;
+            }
+        }
+        if(count==j)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
